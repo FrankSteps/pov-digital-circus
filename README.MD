@@ -1,5 +1,5 @@
 # Pov Digital Circus
-![plushie caine](plushieCaine.png)
+![plushie caine](assets/plushieCaine.png)
 
 ## Requirements
  - g++
@@ -29,7 +29,7 @@ make run
 - Ribbit
 - Kaufmo
 
-> Note: Bubble is extremely rare... like, rare as ![%$@!#](palavreado.png)
+> Note: Bubble is extremely rare... like, rare as ![%$@!#](assets/palavreado.png)
 
 ## Credits
 > Original project:
