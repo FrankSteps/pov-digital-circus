@@ -6,7 +6,7 @@ Arts: FUZZIE-WEASEL
 Code SB3: FUZZIE-WEASEL
 Code C++: Frank Steps
 
-Music:         The free design 
+Music:         The free design
 sound effects: FUZZIE-WEASEL
 
 Plushies images: https://glitchproductions.store/collections/the-amazing-digital-circus
@@ -34,12 +34,12 @@ int main(){
 	ray::Texture nextButton_on = ray::LoadTexture("src/images/NextButton_on.png");
 
 	const int framHands = 11;
-	const int quantPlush = 10;
+	const int quantPlush = 12;
 
 	std::vector <ray::Texture> plushies(quantPlush); 
 	std::vector <ray::Texture> leftHandsV(framHands);
 	std::vector <ray::Texture> hightHandsV(framHands);
-	std::vector <int> randomPlushies(70);
+	std::vector <int> randomPlushies(100);
 
 	for(int i = 0; i < quantPlush; i++){
 		plushies[i] = ray::LoadTexture(("src/images/plushies/p" + std::to_string(i) + ".png").c_str());
@@ -58,7 +58,7 @@ int main(){
 	srand(seed);
 	int randomPlush = 0;
 
-	for (int i = 0; i < 70; i++) {
+	for (int i = 0; i < 100; i++) {
 	    if (rand() % 100000 == 0) {
 	        randomPlushies[i] = 9;
 	    } else {
@@ -68,7 +68,7 @@ int main(){
 	    }
 	}
 
-	const float scale = 0.6f;
+	const float scale = 0.65f;
 
 	const float plushX = (700 - plushies[randomPlush].width * scale)/2;
 	const float plushY = (524 - plushies[randomPlush].height * scale)/2;
@@ -94,7 +94,7 @@ int main(){
 		// mouse coordinates :: parallax effect
 		ray::Vector2 mousePos = ray::GetMousePosition();
 		ray::Vector2 center = {ray::GetScreenWidth()/2.0f, ray::GetScreenHeight()/2.0f};
-		ray::Vector2 deltaMov = {(mousePos.x - center.x) * 0.7f, (mousePos.y - center.y) * 0.7f};
+		ray::Vector2 deltaMov = {(mousePos.x - center.x) * 2.1f, (mousePos.y - center.y) * 2.1f};
 
 		ray::Rectangle buttonN = {plushX - deltaMov.x, (plushY - 150) - deltaMov.y, nextButton.width * scale, nextButton.height * scale};
 		ray::Rectangle buttonPlush = {plushX - deltaMov.x, plushY - deltaMov.y, plushies[0].width * scale, plushies[0].height * scale};
@@ -139,7 +139,7 @@ int main(){
 				if(ray::IsMouseButtonPressed(ray::MOUSE_LEFT_BUTTON)){
 					ray::PlaySound(click);
 					plushAtual++;
-					if(plushAtual >= 50){
+					if(plushAtual >= 100){
 						plushAtual = 0;
 					}
 				}
@@ -149,10 +149,10 @@ int main(){
 
 
 			// render hands
-			handShow = true; 
+			handShow = true;
 			if(ray::IsMouseButtonDown(ray::MOUSE_BUTTON_LEFT)){
 				if(ray::CheckCollisionPointRec(mousePos, buttonN)){
-					ray::DrawTextureEx(hightHandsV[framHands-1], {handX, handY}, 0,  scale*1.1,  ray::WHITE);
+					ray::DrawTextureEx(hightHandsV[framHands-1], {handX - 50.0f, handY - 50.0f}, 0,  scale*1.1,  ray::WHITE);
 
 				} else if (ray::CheckCollisionPointRec(mousePos, buttonPlush) ) {
 					ray::DrawTextureEx(hightHandsV[framHands-2], {handX - 40, handY + (shake.y)*2}, 0,  scale*1.1,  ray::WHITE);
