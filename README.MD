@@ -1,47 +1,49 @@
-# Pov Digital Circus 
-![plushie caine](plushieCaine.png)
+# Pov Digital Circus
+![PlushieCaine-window](assets/plushieCaine.png)
 
 ## Requirements
  - g++
  - Raylib
  - Cmake
 
-## Compiling and running 
+## Compiling and running
 
 ```bash
 git clone https://github.com/FrankSteps/pov-digital-circus
 cd pov-digital-circus
 make
-make run 
+make run
 ```
 
-## Characters 
-- Kinger 
+## Characters
+- Kinger
 - Caine
-- Jax (Jaxy)
+- Jax
 - Zooble 
 - Ragatha
 - Bubble
-- Pomni  
+- Pomni
 - Gummigoo
-- Queenie 
+- Queenie
 - Gangle
+- Ribbit
+- Kaufmo
 
-> Note: Bubble is extremely rare... like, rare as ![%$@!#](palavreado.png)
+> Note: Bubble is extremely rare... like, rare as ![%$@!#](assets/palavreado.png)
 
 ## Credits
-> Original project:  
-https://scratch.mit.edu/projects/1191104157  
+> Original project:
+https://scratch.mit.edu/projects/1191104157
 Thanks, FUZZIE-WEASEL!
 
 ## Assets and Code
-- Arts: FUZZIE-WEASEL  
-- Code (SB3): FUZZIE-WEASEL  
-- Code (C++): Frank Steps  
+- Arts: FUZZIE-WEASEL
+- Code (SB3): FUZZIE-WEASEL
+- Code (C++): Frank Steps
 
 ## Audio
-- Music: The Free Design  
-- Sound effects: FUZZIE-WEASEL  
+- Music: The Free Design
+- Sound effects: FUZZIE-WEASEL
 
 ## Plushies Images
 https://glitchproductions.store/collections/the-amazing-digital-circus
